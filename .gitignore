@@ -4,3 +4,4 @@
 /data/*.sqlite-wal
 .DS_Store
 *.log
+/config.php.from-env
