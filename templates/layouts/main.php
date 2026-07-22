@@ -4,14 +4,19 @@
 /** @var array|null $user */
 /** @var array $categories */
 $pubUser = $user;
+$pageTitle = $pageTitle ?? ($site['name'] . ' — оснастки для печатей и штампов');
 ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title><?= \App\Helpers::e($pageTitle ?? $site['name']) ?></title>
+  <title><?= \App\Helpers::e($pageTitle) ?></title>
+  <meta name="description" content="<?= \App\Helpers::e($site['tagline']) ?>" />
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/globals.css" />
 </head>
 <body>
@@ -32,16 +37,24 @@ $pubUser = $user;
         <img src="/assets/img/logo.png" alt="<?= \App\Helpers::e($site['name']) ?>" class="brand-logo" width="694" height="179" />
       </a>
       <div class="header-search">
-        <form action="/search" method="get" class="search-form">
-          <input type="search" name="q" placeholder="Поиск по каталогу…" value="<?= \App\Helpers::e($_GET['q'] ?? '') ?>" />
-          <button type="submit" class="btn btn-small">Найти</button>
+        <form action="/search" method="get" class="search-form" role="search">
+          <input
+            type="search"
+            name="q"
+            placeholder="Поиск по каталогу…"
+            aria-label="Поиск по каталогу"
+            value="<?= \App\Helpers::e($_GET['q'] ?? '') ?>"
+          />
+          <button type="submit">Найти</button>
         </form>
       </div>
       <div class="header-contacts">
         <a href="<?= \App\Helpers::e($site['phoneHref']) ?>" class="header-phone"><?= \App\Helpers::e($site['phone']) ?></a>
         <span class="header-callback">Заявка и консультация</span>
       </div>
-      <button type="button" class="menu-toggle" aria-label="Меню" id="menu-toggle"><span></span><span></span><span></span></button>
+      <button type="button" class="menu-toggle" aria-label="Меню" id="menu-toggle" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
     <div class="header-nav-wrap" id="header-nav-wrap">
       <div class="container header-nav">

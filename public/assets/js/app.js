@@ -35,7 +35,10 @@
   }
 
   document.getElementById("menu-toggle")?.addEventListener("click", () => {
-    document.getElementById("header-nav-wrap")?.classList.toggle("is-open");
+    const wrap = document.getElementById("header-nav-wrap");
+    const btn = document.getElementById("menu-toggle");
+    const open = wrap?.classList.toggle("is-open");
+    if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
   document.querySelectorAll("[data-add-to-cart]").forEach((btn) => {
@@ -47,8 +50,12 @@
         price: Number(btn.dataset.price) || 0,
         image: btn.dataset.image || null,
       });
-      btn.textContent = "Добавлено";
-      setTimeout(() => (btn.textContent = "В корзину"), 900);
+      btn.classList.add("is-done");
+      btn.textContent = "В корзине";
+      setTimeout(() => {
+        btn.classList.remove("is-done");
+        btn.textContent = "В корзину";
+      }, 1400);
     });
   });
 
@@ -57,26 +64,46 @@
     function renderCart() {
       const items = readCart();
       if (!items.length) {
-        cartPage.innerHTML =
-          '<p class="page-lead">Корзина пуста.</p><a class="btn btn-primary" href="/catalog">В каталог</a>';
+        cartPage.innerHTML = `
+          <div class="panel empty-state">
+            <h2>Ваша корзина пуста</h2>
+            <p class="page-lead">Начните с каталога — найдите нужную оснастку.</p>
+            <a href="/catalog" class="btn btn-primary" style="margin-top:1rem">Перейти в каталог</a>
+          </div>`;
         return;
       }
       const total = items.reduce((s, i) => s + i.price * i.qty, 0);
-      cartPage.innerHTML =
-        "<ul>" +
-        items
-          .map(
-            (i, idx) =>
-              `<li style="display:flex;gap:.75rem;align-items:center;margin:.5rem 0;flex-wrap:wrap">
-                <strong style="flex:1">${i.name}</strong>
-                <input type="number" min="1" value="${i.qty}" data-qty="${idx}" style="width:70px" />
-                <span>${money(i.price * i.qty)}</span>
-                <button type="button" class="btn btn-small" data-remove="${idx}">Удалить</button>
-              </li>`
-          )
-          .join("") +
-        `</ul><p><strong>Итого: ${money(total)}</strong></p>
-         <a class="btn btn-primary" href="/checkout">Оформить заказ</a>`;
+      cartPage.innerHTML = `
+        <div class="cart-layout">
+          <div class="panel">
+            ${items
+              .map(
+                (i, idx) => `
+              <div class="cart-item">
+                ${
+                  i.image
+                    ? `<img src="${i.image}" alt="" />`
+                    : `<div class="product-card-placeholder">${(i.name || "?").slice(0, 1)}</div>`
+                }
+                <div>
+                  <a href="/product/${i.slug || ""}"><strong>${i.name}</strong></a>
+                  <div class="cart-item-controls">
+                    <label>Кол-во <input type="number" min="1" step="1" value="${i.qty}" data-qty="${idx}" /></label>
+                    <button type="button" class="link-btn" data-remove="${idx}">Удалить</button>
+                  </div>
+                </div>
+                <div><strong>${money(i.price * i.qty)}</strong></div>
+              </div>`
+              )
+              .join("")}
+          </div>
+          <aside class="panel">
+            <h2 style="margin-top:0">Итого</h2>
+            <p style="font-size:1.5rem;font-weight:800">${money(total)}</p>
+            <p class="page-lead">Оформите заявку — товары без лимита по количеству, способ доставки подтвердим отдельно.</p>
+            <a href="/checkout" class="btn btn-primary" style="width:100%">Оформить заявку</a>
+          </aside>
+        </div>`;
       cartPage.querySelectorAll("[data-qty]").forEach((input) => {
         input.addEventListener("change", () => {
           const items = readCart();

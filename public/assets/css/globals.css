@@ -12,8 +12,8 @@
   --ok: #1f7a4c;
   --shadow: 0 18px 50px rgba(19, 32, 51, 0.08);
   --radius: 18px;
-  --font-display: var(--font-display), "Unbounded", sans-serif;
-  --font-body: var(--font-body), "Manrope", sans-serif;
+  --font-display: "Unbounded", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
 }
 
 * {
