@@ -1,0 +1,37 @@
+@page { size: A4 landscape; margin: 6mm; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 8px; background: #dfe5ec; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 10px; }
+.sheet { width: 297mm; max-width: 100%; margin: 0 auto; background: #fff; border: 1px solid #999; padding: 8px 10px 10px; }
+.admin-bar { max-width: 297mm; margin: 0 auto 8px; padding: 8px 12px; background: #132033; color: #fff; border-radius: 8px; font-size: 12px; }
+.admin-bar a { color: #9fe8ff; }
+@media print {
+  html, body { background: #fff !important; padding: 0 !important; margin: 0 !important; }
+  .admin-bar, .no-print { display: none !important; }
+}
+table { border-collapse: collapse; width: 100%; }
+.law { text-align: right; font-size: 8px; line-height: 1.25; margin: 0 0 4px; }
+.head td { vertical-align: top; }
+.left-col { width: 118px; padding-right: 6px; }
+.title-stack { font-size: 11px; font-weight: 700; line-height: 1.15; }
+.status-row { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+.status-box { border: 1.5px solid #000; min-width: 34px; text-align: center; font-size: 18px; font-weight: 700; padding: 2px 6px; }
+.status-help { margin-top: 10px; font-size: 8px; line-height: 1.2; }
+.sf-line { font-size: 12px; margin: 0 0 4px; }
+.sf-line .num, .sf-line .date { display: inline-block; min-width: 64px; text-align: center; border-bottom: 1px solid #000; font-weight: 700; padding: 0 6px; }
+.sf-line .date { min-width: 130px; }
+.mark { color: #444; font-size: 9px; }
+.party td { padding: 1px 0; vertical-align: bottom; }
+.party .lbl { width: 250px; white-space: nowrap; padding-right: 6px; }
+.party .val { border-bottom: 1px solid #000; font-weight: 700; padding: 0 4px 1px; }
+.party .code { width: 28px; text-align: right; color: #444; }
+.goods th, .goods td { border: 1px solid #000; padding: 2px 3px; vertical-align: middle; }
+.goods th { font-size: 7.5px; font-weight: 400; text-align: center; }
+.goods .c { text-align: center; }
+.goods .l { text-align: left; }
+.goods .r { text-align: right; white-space: nowrap; }
+.total-row td { font-weight: 700; }
+.block td { vertical-align: top; padding: 2px 4px; }
+.uline { border-bottom: 1px solid #000; min-height: 14px; margin-top: 10px; }
+.cap { font-size: 8px; color: #444; text-align: center; margin-top: 1px; }
+.strong { font-weight: 700; }
+.mp { margin-top: 8px; font-size: 11px; font-weight: 700; }

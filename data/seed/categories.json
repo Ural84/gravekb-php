@@ -1,0 +1,447 @@
+[
+  {
+    "slug": "ruchnye-osnastki",
+    "name": "Ручные оснастки",
+    "priceFrom": 20,
+    "subcategories": [
+      {
+        "slug": "kruglye-plastmassovye",
+        "name": "Круглые пластмассовые",
+        "priceFrom": 22
+      },
+      {
+        "slug": "pryamougolnye-i-treugolnye-plastmassovye",
+        "name": "Прямоугольные и треугольные пластмассовые",
+        "priceFrom": 20
+      },
+      {
+        "slug": "metallicheskie",
+        "name": "Металлические",
+        "priceFrom": 154
+      },
+      {
+        "slug": "derevyannye",
+        "name": "Деревянные",
+        "priceFrom": 127
+      }
+    ]
+  },
+  {
+    "slug": "avtomaticheskie",
+    "name": "Автоматические",
+    "priceFrom": 207,
+    "subcategories": [
+      {
+        "slug": "ideal",
+        "name": "Ideal",
+        "priceFrom": 207
+      },
+      {
+        "slug": "trodat-printy-line",
+        "name": "Trodat Printy Line",
+        "priceFrom": 216
+      },
+      {
+        "slug": "trodat-professional",
+        "name": "Trodat Professional",
+        "priceFrom": 1059
+      },
+      {
+        "slug": "colop-printer-line",
+        "name": "Colop Printer Line",
+        "priceFrom": 249
+      },
+      {
+        "slug": "colop-classic-expert-line",
+        "name": "Colop Classic / Expert Line",
+        "priceFrom": 249
+      },
+      {
+        "slug": "shiny",
+        "name": "Shiny",
+        "priceFrom": 266
+      },
+      {
+        "slug": "grm",
+        "name": "GRM",
+        "priceFrom": null
+      }
+    ]
+  },
+  {
+    "slug": "karmannye",
+    "name": "Карманные",
+    "priceFrom": 248,
+    "subcategories": [
+      {
+        "slug": "trodat",
+        "name": "Trodat",
+        "priceFrom": 265
+      },
+      {
+        "slug": "colop",
+        "name": "Colop",
+        "priceFrom": 232
+      },
+      {
+        "slug": "shiny",
+        "name": "Shiny",
+        "priceFrom": 248
+      },
+      {
+        "slug": "grm",
+        "name": "GRM",
+        "priceFrom": null
+      }
+    ]
+  },
+  {
+    "slug": "samonabornye-pechati",
+    "name": "Самонаборные печати",
+    "priceFrom": 39,
+    "subcategories": [
+      {
+        "slug": "trodat",
+        "name": "Trodat",
+        "priceFrom": 861
+      },
+      {
+        "slug": "ideal",
+        "name": "Ideal",
+        "priceFrom": 236
+      },
+      {
+        "slug": "colop",
+        "name": "Colop",
+        "priceFrom": 36
+      },
+      {
+        "slug": "kassy-bukv-tsifr-i-simvolov",
+        "name": "Кассы букв, цифр и символов",
+        "priceFrom": 36,
+        "subcategories": [
+          {
+            "slug": "trodat",
+            "name": "Trodat",
+            "priceFrom": 39
+          },
+          {
+            "slug": "colop",
+            "name": "Colop",
+            "priceFrom": null
+          }
+        ]
+      },
+      {
+        "slug": "shiny",
+        "name": "Shiny",
+        "priceFrom": 975
+      }
+    ]
+  },
+  {
+    "slug": "datery",
+    "name": "Датеры",
+    "priceFrom": 351,
+    "subcategories": [
+      {
+        "slug": "trodat",
+        "name": "Trodat",
+        "priceFrom": 378
+      },
+      {
+        "slug": "colop",
+        "name": "Colop",
+        "priceFrom": 633
+      },
+      {
+        "slug": "so-svobodnym-polem",
+        "name": "Со свободным полем",
+        "priceFrom": 633,
+        "subcategories": [
+          {
+            "slug": "trodat",
+            "name": "Trodat",
+            "priceFrom": 829
+          },
+          {
+            "slug": "colop",
+            "name": "Colop",
+            "priceFrom": 633
+          },
+          {
+            "slug": "shiny",
+            "name": "Shiny",
+            "priceFrom": 677
+          }
+        ]
+      },
+      {
+        "slug": "s-bukhgalterskimi-terminami",
+        "name": "С бухгалтерскими терминами",
+        "priceFrom": 498
+      },
+      {
+        "slug": "lentochnye",
+        "name": "Ленточные",
+        "priceFrom": 271,
+        "subcategories": [
+          {
+            "slug": "trodat",
+            "name": "Trodat",
+            "priceFrom": 366
+          },
+          {
+            "slug": "colop",
+            "name": "Colop",
+            "priceFrom": null
+          }
+        ]
+      },
+      {
+        "slug": "samonabornye",
+        "name": "Самонаборные",
+        "priceFrom": 1469,
+        "subcategories": [
+          {
+            "slug": "trodat",
+            "name": "Trodat",
+            "priceFrom": 1727
+          },
+          {
+            "slug": "colop",
+            "name": "Colop",
+            "priceFrom": null
+          }
+        ]
+      },
+      {
+        "slug": "pochtovye",
+        "name": "Почтовые",
+        "priceFrom": 979,
+        "subcategories": [
+          {
+            "slug": "trodat",
+            "name": "Trodat",
+            "priceFrom": 1231
+          },
+          {
+            "slug": "colop",
+            "name": "Colop",
+            "priceFrom": 979
+          },
+          {
+            "slug": "shiny",
+            "name": "Shiny",
+            "priceFrom": 1048
+          }
+        ]
+      },
+      {
+        "slug": "shiny",
+        "name": "Shiny",
+        "priceFrom": 351
+      },
+      {
+        "slug": "grm",
+        "name": "GRM",
+        "priceFrom": null
+      }
+    ]
+  },
+  {
+    "slug": "numeratory",
+    "name": "Нумераторы",
+    "priceFrom": 219,
+    "subcategories": [
+      {
+        "slug": "trodat-printy",
+        "name": "Trodat Printy",
+        "priceFrom": 442
+      },
+      {
+        "slug": "colop",
+        "name": "Colop",
+        "priceFrom": 1132
+      },
+      {
+        "slug": "so-svobodnym-polem",
+        "name": "Со свободным полем",
+        "priceFrom": 1132,
+        "subcategories": [
+          {
+            "slug": "trodat",
+            "name": "Trodat",
+            "priceFrom": 4139
+          },
+          {
+            "slug": "colop",
+            "name": "Colop",
+            "priceFrom": null
+          }
+        ]
+      },
+      {
+        "slug": "lentochnye",
+        "name": "Ленточные",
+        "priceFrom": 205,
+        "subcategories": [
+          {
+            "slug": "trodat",
+            "name": "Trodat",
+            "priceFrom": 219
+          },
+          {
+            "slug": "colop",
+            "name": "Colop",
+            "priceFrom": null
+          }
+        ]
+      },
+      {
+        "slug": "s-planirovannoi-periodichnostyu-trodat",
+        "name": "С планированной периодичностью Trodat",
+        "priceFrom": 6883
+      },
+      {
+        "slug": "s-planirovannoi-periodichnostyu-reiner",
+        "name": "С планированной периодичностью Reiner",
+        "priceFrom": 5339
+      },
+      {
+        "slug": "shiny",
+        "name": "Shiny",
+        "priceFrom": 419
+      },
+      {
+        "slug": "s-planirovannoi-periodichnostyu-grm",
+        "name": "С планированной периодичностью GRM",
+        "priceFrom": null
+      }
+    ]
+  },
+  {
+    "slug": "shtempelnaya-kraska",
+    "name": "Штемпельная краска",
+    "priceFrom": 42,
+    "subcategories": [
+      {
+        "slug": "trodat",
+        "name": "Trodat",
+        "priceFrom": 226
+      },
+      {
+        "slug": "ideal",
+        "name": "Ideal",
+        "priceFrom": 42
+      },
+      {
+        "slug": "colop",
+        "name": "Colop",
+        "priceFrom": 164
+      },
+      {
+        "slug": "noris",
+        "name": "Noris",
+        "priceFrom": 254
+      },
+      {
+        "slug": "shiny",
+        "name": "Shiny",
+        "priceFrom": 175
+      }
+    ]
+  },
+  {
+    "slug": "shtempelnye-podushki",
+    "name": "Штемпельные подушки",
+    "priceFrom": 24,
+    "subcategories": [
+      {
+        "slug": "trodat",
+        "name": "Trodat",
+        "priceFrom": 24
+      },
+      {
+        "slug": "ideal",
+        "name": "Ideal",
+        "priceFrom": 88
+      },
+      {
+        "slug": "colop",
+        "name": "Colop",
+        "priceFrom": 148
+      },
+      {
+        "slug": "noris",
+        "name": "Noris",
+        "priceFrom": 1604
+      },
+      {
+        "slug": "shiny",
+        "name": "Shiny",
+        "priceFrom": 158
+      },
+      {
+        "slug": "grm",
+        "name": "GRM",
+        "priceFrom": null
+      }
+    ]
+  },
+  {
+    "slug": "futlyary-i-boksy-dlya-osnastok",
+    "name": "Футляры и боксы для оснасток",
+    "priceFrom": 155,
+    "subcategories": []
+  },
+  {
+    "slug": "plombiry-i-plombiratory",
+    "name": "Пломбиры и пломбираторы",
+    "priceFrom": 4,
+    "subcategories": []
+  },
+  {
+    "slug": "prochii-tovari",
+    "name": "Прочие товары",
+    "priceFrom": 21,
+    "subcategories": []
+  },
+  {
+    "slug": "flesh-pechati",
+    "name": "Флэш технология",
+    "priceFrom": 32,
+    "subcategories": [
+      {
+        "slug": "flesh-oborudovanie",
+        "name": "Флэш оборудование",
+        "priceFrom": 53500
+      },
+      {
+        "slug": "raskhodnye-materialy-flash-pechati",
+        "name": "Расходные материалы Flash",
+        "priceFrom": 32
+      },
+      {
+        "slug": "kraska-dlya-flesh-pechatei",
+        "name": "Краска для флэш-печатей",
+        "priceFrom": 1304
+      },
+      {
+        "slug": "ruchnye-flesh-osnastki",
+        "name": "Ручные флэш-оснастки",
+        "priceFrom": 281
+      },
+      {
+        "slug": "metallicheskie-flesh-osnastki",
+        "name": "Металлические флэш-оснастки",
+        "priceFrom": 1147
+      },
+      {
+        "slug": "avtomaticheskie-flesh-osnastki",
+        "name": "Автоматические флэш-оснастки",
+        "priceFrom": 1150
+      }
+    ]
+  }
+]
