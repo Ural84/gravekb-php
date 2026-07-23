@@ -1,37 +1,265 @@
-@page { size: A4 landscape; margin: 6mm; }
-* { box-sizing: border-box; }
-body { margin: 0; padding: 8px; background: #dfe5ec; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 10px; }
-.sheet { width: 297mm; max-width: 100%; margin: 0 auto; background: #fff; border: 1px solid #999; padding: 8px 10px 10px; }
-.admin-bar { max-width: 297mm; margin: 0 auto 8px; padding: 8px 12px; background: #132033; color: #fff; border-radius: 8px; font-size: 12px; }
+@page { size: A4 landscape; margin: 4mm; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  margin: 0;
+  padding: 8px;
+  background: #dfe5ec;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8.5px;
+  line-height: 1.12;
+}
+.sheet {
+  width: 287mm;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #000;
+  padding: 3px 5px 4px;
+}
+.admin-bar {
+  max-width: 287mm;
+  margin: 0 auto 8px;
+  padding: 8px 12px;
+  background: #132033;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 12px;
+}
 .admin-bar a { color: #9fe8ff; }
 @media print {
   html, body { background: #fff !important; padding: 0 !important; margin: 0 !important; }
   .admin-bar, .no-print { display: none !important; }
+  .sheet { border: none; width: auto; max-width: none; padding: 0; }
 }
+
 table { border-collapse: collapse; width: 100%; }
-.law { text-align: right; font-size: 8px; line-height: 1.25; margin: 0 0 4px; }
-.head td { vertical-align: top; }
-.left-col { width: 118px; padding-right: 6px; }
-.title-stack { font-size: 11px; font-weight: 700; line-height: 1.15; }
-.status-row { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
-.status-box { border: 1.5px solid #000; min-width: 34px; text-align: center; font-size: 18px; font-weight: 700; padding: 2px 6px; }
-.status-help { margin-top: 10px; font-size: 8px; line-height: 1.2; }
-.sf-line { font-size: 12px; margin: 0 0 4px; }
-.sf-line .num, .sf-line .date { display: inline-block; min-width: 64px; text-align: center; border-bottom: 1px solid #000; font-weight: 700; padding: 0 6px; }
-.sf-line .date { min-width: 130px; }
-.mark { color: #444; font-size: 9px; }
-.party td { padding: 1px 0; vertical-align: bottom; }
-.party .lbl { width: 250px; white-space: nowrap; padding-right: 6px; }
-.party .val { border-bottom: 1px solid #000; font-weight: 700; padding: 0 4px 1px; }
-.party .code { width: 28px; text-align: right; color: #444; }
-.goods th, .goods td { border: 1px solid #000; padding: 2px 3px; vertical-align: middle; }
-.goods th { font-size: 7.5px; font-weight: 400; text-align: center; }
+td, th { vertical-align: top; }
+
+.law {
+  text-align: right;
+  font-size: 6.5px;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.head-table > tbody > tr > td { vertical-align: top; }
+.head-left {
+  width: 92px;
+  padding-right: 4px;
+  border-right: 1px solid #000;
+}
+.head-right { padding-left: 4px; }
+
+.upd-title {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.status-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+  font-size: 9px;
+}
+.status-box {
+  border: 1px solid #000;
+  min-width: 22px;
+  height: 18px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+.status-help { font-size: 6.5px; line-height: 1.15; }
+
+.sf-line {
+  font-size: 9px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+}
+.sf-line .ul {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  min-width: 36px;
+  text-align: center;
+  font-weight: 700;
+  padding: 0 3px;
+  line-height: 1.1;
+}
+.sf-line .ul-wide { min-width: 110px; }
+.sf-line .code { font-size: 8px; color: #000; }
+
+.field-table td { padding: 0; vertical-align: bottom; }
+.field-table .lbl {
+  white-space: nowrap;
+  padding-right: 2px;
+  font-size: 8.5px;
+}
+.field-table .val {
+  border-bottom: 1px solid #000;
+  width: 99%;
+  font-weight: 700;
+  font-size: 9px;
+  padding: 0 2px 1px;
+  line-height: 1.2;
+}
+.field-table .code {
+  width: 22px;
+  text-align: right;
+  font-size: 8px;
+  white-space: nowrap;
+  padding-left: 2px;
+}
+.field-table tr.spacer td { height: 1px; padding-top: 1px; }
+
+.field-5b {
+  font-size: 6.5px;
+  line-height: 1.15;
+  margin: 2px 0;
+  text-align: justify;
+}
+.field-5b .ul {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  min-width: 28px;
+  padding: 0 2px;
+}
+
+.goods { margin-top: 2px; border: 1px solid #000; }
+.goods th, .goods td {
+  border: 1px solid #000;
+  padding: 1px 2px;
+  font-size: 8px;
+  vertical-align: middle;
+}
+.goods thead th {
+  font-weight: 400;
+  text-align: center;
+  font-size: 6px;
+  line-height: 1.05;
+  padding: 1px;
+}
+.goods .codes th {
+  font-size: 7px;
+  font-weight: 700;
+  padding: 0 1px 1px;
+  line-height: 1;
+}
 .goods .c { text-align: center; }
 .goods .l { text-align: left; }
 .goods .r { text-align: right; white-space: nowrap; }
-.total-row td { font-weight: 700; }
-.block td { vertical-align: top; padding: 2px 4px; }
-.uline { border-bottom: 1px solid #000; min-height: 14px; margin-top: 10px; }
-.cap { font-size: 8px; color: #444; text-align: center; margin-top: 1px; }
-.strong { font-weight: 700; }
-.mp { margin-top: 8px; font-size: 11px; font-weight: 700; }
+.goods .name-col { min-width: 120px; }
+.goods .total-row td { font-weight: 700; font-size: 8px; }
+
+.col-a { width: 28px; }
+.col-1 { width: 18px; }
+.col-1a { width: auto; }
+.col-1b { width: 22px; }
+.col-2 { width: 22px; }
+.col-2a { width: 22px; }
+.col-3 { width: 28px; }
+.col-4 { width: 38px; }
+.col-5 { width: 42px; }
+.col-6 { width: 34px; }
+.col-7 { width: 28px; }
+.col-8 { width: 34px; }
+.col-9 { width: 42px; }
+.col-10 { width: 22px; }
+.col-10a { width: 28px; }
+.col-11 { width: 36px; }
+
+.sign-block {
+  margin-top: 0;
+  border: 1px solid #000;
+  border-top: none;
+}
+.sign-block td {
+  border: 1px solid #000;
+  padding: 2px 3px;
+  font-size: 7px;
+  vertical-align: top;
+}
+.sign-block .sheet-note {
+  width: 68px;
+  font-weight: 700;
+  font-size: 7px;
+  line-height: 1.15;
+}
+.sign-block .role { font-size: 7px; line-height: 1.1; min-height: 22px; }
+.sign-block .sign-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 6.5px;
+  color: #333;
+}
+.sign-block .sign-row span { flex: 1; text-align: center; border-top: 1px solid #000; padding-top: 1px; }
+.sign-block .name-line {
+  border-bottom: 1px solid #000;
+  min-height: 12px;
+  margin-top: 2px;
+  font-weight: 700;
+  font-size: 8px;
+  text-align: center;
+}
+.sign-block .ogrnip-note {
+  font-size: 6px;
+  line-height: 1.1;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.footer-section { margin-top: 2px; }
+.footer-section td { padding: 1px 2px; vertical-align: top; font-size: 8px; }
+.footer-section .lbl { white-space: nowrap; padding-right: 2px; }
+.footer-section .val {
+  border-bottom: 1px solid #000;
+  font-weight: 700;
+  padding: 0 2px 1px;
+}
+.footer-section .code { width: 22px; text-align: right; font-size: 8px; }
+.footer-section .hint { font-size: 6px; color: #333; text-align: center; }
+
+.footer-cols { margin-top: 2px; }
+.footer-cols > tbody > tr > td {
+  width: 50%;
+  vertical-align: top;
+  padding: 0 2px 0 0;
+}
+.footer-cols > tbody > tr > td + td { padding: 0 0 0 2px; }
+.footer-box { border: none; }
+.footer-box td { padding: 1px 0; font-size: 8px; vertical-align: bottom; }
+.footer-box .title { font-size: 7.5px; line-height: 1.1; padding-bottom: 0; }
+.footer-box .line {
+  border-bottom: 1px solid #000;
+  min-height: 10px;
+  font-weight: 700;
+  font-size: 8px;
+  padding: 0 2px;
+}
+.footer-box .sub {
+  display: flex;
+  gap: 3px;
+  font-size: 6px;
+  color: #333;
+  margin-top: 0;
+}
+.footer-box .sub span { flex: 1; text-align: center; }
+.footer-box .mp { font-weight: 700; font-size: 8px; margin-top: 2px; }
+.footer-box .entity {
+  border-bottom: 1px solid #000;
+  font-weight: 700;
+  font-size: 8px;
+  min-height: 12px;
+  padding: 0 2px;
+  margin-top: 2px;
+}
+.footer-box .entity-hint {
+  font-size: 6px;
+  color: #333;
+  line-height: 1.1;
+}
